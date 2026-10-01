@@ -45,4 +45,32 @@
         }
     }
 
+    <h2>Members 16 or Older</h2>
+    @foreach (var user in Model.Users)
+    {
+        if (user.Age >= 16)
+        {
+            <div class="alert alert-warning">
+                <strong>@user.Username</strong>
+                <p>Age: @user.Age</p>
+            </div>
+        }
+    }
+    @*Module 6 Coding Challenge
+    Added a section of the webpage that displays a list of users who are 16 or older. *@
+
+    <h2>Posts with fewer than 20 likes</h2>
+    @foreach (var post in Model.Posts)
+    {
+        if(post.Likes < 20)
+        {
+            <div class="alert alert-dark">
+                <strong>@post.Username</strong>
+                <p>@post.Content</p>
+                <small>Likes: @post.Likes</small>
+            </div>
+        }
+    }
+    @*Module 6 Coding Challenge.
+    Added a section of the webpage that displays a list of posts with less than 20 likes.*@
 </div>
