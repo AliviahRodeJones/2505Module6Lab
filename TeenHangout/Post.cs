@@ -5,6 +5,7 @@ public class Post
     public string Username { get; set; }
     public string Content { get; set; }
     public int Likes { get; set; }
+    // Three properties for the posts class. 
 
     public Post(string username, string content, int likes)
     {
@@ -12,4 +13,5 @@ public class Post
         Content = content;
         Likes = likes;
     }
+    // class constructor for Post
 }

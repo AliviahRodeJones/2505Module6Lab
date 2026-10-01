@@ -1,16 +1,16 @@
 ﻿@page
-@model IndexModel
+@model TeenHangout.Pages.IndexModel
 @{
     ViewData["Title"] = "Teen Hangout";
 }
 
-@* Page heading. Bootstrap's container adds side spacing. *@
+
 <div class="container">
 
     <h1 class="text-center">Teen Hangout</h1>
     <p class="text-center">Your virtual space to connect!</p>
 
-    @* Section 1: show every member *@
+    @* Shows every member *@
     <h2>Our Members</h2>
     @foreach (var user in Model.Users)
     {
@@ -19,7 +19,7 @@
         </div>
     }
 
-    @* Section 2: show every post *@
+    @* Shows every post. *@
     <h2>Recent Posts</h2>
     @foreach (var post in Model.Posts)
     {
@@ -30,12 +30,12 @@
         </div>
     }
 
-    @* Section 3: only show posts with 20 or more likes *@
+    @* Shows only posts with more than 20 likes *@
     <h2>Popular Posts (20+ Likes)</h2>
     @foreach (var post in Model.Posts)
     {
-        @* No @ needed in front of if when you are already inside a code block *@
         if (post.Likes >= 20)
+        @*Checks if the number of likes on the post is more than or equal to 20.*@
         {
             <div class="alert alert-success">
                 <strong>@post.Username</strong>
