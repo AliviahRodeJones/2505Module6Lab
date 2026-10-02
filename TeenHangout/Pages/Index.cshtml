@@ -49,6 +49,7 @@
     @foreach (var user in Model.Users)
     {
         if (user.Age >= 16)
+        @*Checks if the age of the user is equal or above 16.*@
         {
             <div class="alert alert-warning">
                 <strong>@user.Username</strong>
@@ -59,10 +60,12 @@
     @*Module 6 Coding Challenge
     Added a section of the webpage that displays a list of users who are 16 or older. *@
 
+
     <h2>Posts with fewer than 20 likes</h2>
     @foreach (var post in Model.Posts)
     {
         if(post.Likes < 20)
+        @*Checks if the number of likes on each post is less than 20*@
         {
             <div class="alert alert-dark">
                 <strong>@post.Username</strong>

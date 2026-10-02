@@ -22,7 +22,7 @@ public class IndexModel : PageModel
         new("BookwormBen", "Reading the best book ever!", 15),
         new("MusicLover", "Concert next week! So excited!", 22), 
         // Module 6 Coding Challenge
-        new("MarathonFanMichael", "Attending a 2k this weekend! Wish me luck!", 20), //new user
-        new("PokemonFan", "Just caught a shiny Gyrados! So awesome!", 19) // new user
+        new("MarathonFanMichael", "Attending a 2k this weekend! Wish me luck!", 20), //new post
+        new("PokemonFan", "Just caught a shiny Gyrados! So awesome!", 19) // new post
     ];
 }

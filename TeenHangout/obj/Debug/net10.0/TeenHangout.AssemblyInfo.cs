@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TeenHangout")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c96cc6033cd237a81cbed74e6c06f412f7565b78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0321aa0f0416df4f7e8fc43b04a4147406ce8c41")]
 [assembly: System.Reflection.AssemblyProductAttribute("TeenHangout")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TeenHangout")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
