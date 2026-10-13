@@ -10,6 +10,24 @@
     <h1 class="text-center">Teen Hangout</h1>
     <p class="text-center">Your virtual space to connect!</p>
 
+@*Shows the total number of likes on the entire app.*@
+<div class ="text-center" style ="color:orange">
+
+    @{ IndexModel.likeCounter = 0; }
+    @* Resets the likes back to 0*@
+
+    @foreach (var post in Model.Posts)
+    {
+        IndexModel.likeCounter = IndexModel.likeCounter + @post.Likes;
+    }
+    <h2>Total Likes: @IndexModel.likeCounter</h2>
+    @*Displays likeCounter*@
+    
+</div>
+    @*This block of code displays the total amount of likes on the app. A foreach loop loops
+    over the posts in Posts and adds the likes of that post to the global variable likeCounter.*@
+
+
     @* Shows every member *@
     <h2>Our Members</h2>
     @foreach (var user in Model.Users)
@@ -30,7 +48,7 @@
         </div>
     }
 
-    @* Shows only posts with more than 20 likes *@
+    @* Shows only posts with 20 or more likes *@
     <h2>Popular Posts (20+ Likes)</h2>
     @foreach (var post in Model.Posts)
     {
@@ -45,6 +63,7 @@
         }
     }
 
+    @*Shows users that are 16 or older. *@
     <h2>Members 16 or Older</h2>
     @foreach (var user in Model.Users)
     {
@@ -60,7 +79,7 @@
     @*Module 6 Coding Challenge
     Added a section of the webpage that displays a list of users who are 16 or older. *@
 
-
+    @* Displays posts with fewer than 20 likes.*@
     <h2>Posts with fewer than 20 likes</h2>
     @foreach (var post in Model.Posts)
     {
